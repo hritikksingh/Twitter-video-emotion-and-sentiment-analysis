@@ -15,13 +15,8 @@ import glob
 
 
 # Misspelled data
-
-misspell_data = pd.read_csv("./data/text/aspell.txt",sep=":",names=["correction","misspell"])
-misspell_data.misspell = misspell_data.misspell.str.strip()
-misspell_data.misspell = misspell_data.misspell.str.split(" ")
-misspell_data = misspell_data.explode("misspell").reset_index(drop=True)
-misspell_data.drop_duplicates("misspell",inplace=True)
-miss_corr = dict(zip(misspell_data.misspell, misspell_data.correction))
+a_file=open("./data/text/aspell.pkl","rb")
+miss_corr = pickle.load(a_file)
 
 
 def misspelled_correction(val):
