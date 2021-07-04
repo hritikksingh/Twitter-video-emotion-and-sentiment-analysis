@@ -87,7 +87,7 @@ def speech_to_text():
     return text;
 
 
-def get_sentiment():
+def get_text_sentiment():
     yaml_file = open('./data/text/model.yaml', 'r')
     loaded_model_yaml = yaml_file.read()
     yaml_file.close()
@@ -106,9 +106,6 @@ def get_sentiment():
     result.columns = ["sentiment","percentage"]
     result=result[result.percentage !=0]
     return result
-
-print(get_sentiment())
-
 
 
 

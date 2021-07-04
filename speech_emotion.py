@@ -28,7 +28,7 @@ def extract_feature(file_name, mfcc, chroma, mel):
     return result
 
 #main function to predict the emotion
-def speech_emotion():
+def get_speech_emotion():
     Pkl_Filename = "./data/speech/Emotion_Voice_Detection_Model.pkl"  
     with open(Pkl_Filename, 'rb') as file:  
         Emotion_Voice_Detection_Model = pickle.load(file)
@@ -41,6 +41,4 @@ def speech_emotion():
 
     emotion=Emotion_Voice_Detection_Model.predict(ans)
     return emotion[0]
-
-print(speech_emotion())
 

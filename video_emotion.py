@@ -62,6 +62,3 @@ def get_video_emotion():
     run_video()
     return get_perc()
 
-print(get_video_emotion())
-
-
