@@ -1,0 +1,86 @@
+backend: tensorflow
+class_name: Sequential
+config:
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple [null, 160]
+      dtype: float32
+      name: embedding_1_input
+      ragged: false
+      sparse: false
+  - class_name: Embedding
+    config:
+      activity_regularizer: null
+      batch_input_shape: !!python/tuple [null, 160]
+      dtype: float32
+      embeddings_constraint: null
+      embeddings_initializer:
+        class_name: RandomUniform
+        config: {maxval: 0.05, minval: -0.05, seed: null}
+      embeddings_regularizer: null
+      input_dim: 29337
+      input_length: 160
+      mask_zero: false
+      name: embedding_1
+      output_dim: 160
+      trainable: true
+  - class_name: SpatialDropout1D
+    config: {dtype: float32, name: spatial_dropout1d_1, noise_shape: null, rate: 0.2,
+      seed: null, trainable: true}
+  - class_name: LSTM
+    config:
+      activation: tanh
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dropout: 0.2
+      dtype: float32
+      go_backwards: false
+      implementation: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config: {seed: null}
+      kernel_regularizer: null
+      name: lstm_1
+      recurrent_activation: sigmoid
+      recurrent_constraint: null
+      recurrent_dropout: 0.2
+      recurrent_initializer:
+        class_name: Orthogonal
+        config: {gain: 1.0, seed: null}
+      recurrent_regularizer: null
+      return_sequences: false
+      return_state: false
+      stateful: false
+      time_major: false
+      trainable: true
+      unit_forget_bias: true
+      units: 250
+      unroll: false
+      use_bias: true
+  - class_name: Dense
+    config:
+      activation: softmax
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dtype: float32
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config: {seed: null}
+      kernel_regularizer: null
+      name: dense_2
+      trainable: true
+      units: 13
+      use_bias: true
+  name: sequential_2
+keras_version: 2.4.0
