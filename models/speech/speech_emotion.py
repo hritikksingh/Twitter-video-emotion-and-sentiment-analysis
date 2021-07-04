@@ -42,6 +42,5 @@ def speech_emotion():
     emotion=Emotion_Voice_Detection_Model.predict(ans)
     return emotion[0]
 
-print(speech_emotion())
 
 

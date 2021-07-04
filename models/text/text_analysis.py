@@ -3,11 +3,15 @@ import numpy as np
 import pandas as pd 
 import emoji
 import transformers
-from transformers import TFAutoModel, AutoTokenizer
 from tqdm.notebook import tqdm
 from tokenizers import Tokenizer, models, pre_tokenizers, decoders, processors
-from keras.preprocessing import sequence, text
+from tensorflow.keras.preprocessing import sequence, text
+from tensorflow.keras.models import model_from_json,model_from_yaml
 from tqdm import tqdm
+import pickle
+import speech_recognition as sr
+import glob
+
 
 
 # Misspelled data
@@ -74,15 +78,29 @@ sent_to_id  = {"empty":0, "sadness":1,"enthusiasm":2,"neutral":3,"worry":4,
                         "surprise":5,"love":6,"fun":7,"hate":8,"happiness":9,"boredom":10,"relief":11,"anger":12}
 
 
-
-
-
-import pickle
 token=pickle.load(open("token.pkl","rb"))
 max_len = 160
 
 
-def get_sentiment(model,text):
+
+def speech_to_text():    
+    r = sr.Recognizer()    
+    file = glob.glob('/home/hritik/Documents/GITHUB/Video-emotion-and-sentiment-analysis/audio/*.wav')[0]
+    with sr.AudioFile(file) as source:
+        audio = r.record(source)
+        text = r.recognize_google(audio)            
+    return text;
+
+
+def get_sentiment():
+    yaml_file = open('model.yaml', 'r')
+    loaded_model_yaml = yaml_file.read()
+    yaml_file.close()
+    model = model_from_yaml(loaded_model_yaml)
+    # load weights into new model
+    model.load_weights("model.h5")
+    
+    text=speech_to_text()
     text = clean_text(text)
     #tokenize
     twt = token.texts_to_sequences([text])
