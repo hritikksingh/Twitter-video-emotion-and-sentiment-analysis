@@ -45,8 +45,16 @@ def main():
     t2.join()
     t3.join()
     
-    while not que.empty():
-        result=que.get()
-        print(result())
+    output={}
+    result=que.get()
+    output['video']=result()
+    
+    result=que.get()
+    data=result()
+    output['text']=dict(data.values)
+    
+    result=que.get()
+    output['speech']=str(result())
+    
+    return output
 
-main()
