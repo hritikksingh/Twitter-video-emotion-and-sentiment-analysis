@@ -1,4 +1,4 @@
-# Video-emotion-and-sentiment-analysis
+# Twitter video emotion and sentiment analysis
 
 --> The first and foremost step is to create 3 folders named: input, audio and video.
 
