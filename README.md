@@ -32,7 +32,7 @@ We’ll use the git clone command along with the URL that points to your fork of
 * Type this command:
 
 ```
-git clone https://github.com/NikkiPriya/Project-Exp-Recog
+git clone https://github.com/hritikksingh/Twitter-video-emotion-and-sentiment-analysis.git
 ```
 
 
