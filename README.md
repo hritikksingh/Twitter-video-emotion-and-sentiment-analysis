@@ -10,7 +10,7 @@ Emotion analysis is the process of identifying human emotion.
 ### Let's setup in your local machine first:
 1. `fork` the repository  - Creates a cope of this project in your github so that you can make changes locally.
 2. Clone the repository to your local machine using `git clone https://github.com/hritikksingh/Twitter-video-emotion-and-sentiment-analysis.git`.
-3. Now navigate to the dowloads folder to install the requirements.txt using command `pip install -r requirements.txt`
+3. Now navigate to the dowloaded folder to install the requirements.txt using command `pip install -r requirements.txt`
 4. Now you can start your coding magic to make some awesome changes.
 
 ## <u> How to Contribute? Let's Get Started: </u>
