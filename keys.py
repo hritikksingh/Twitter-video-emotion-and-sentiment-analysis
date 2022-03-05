@@ -1,4 +1,4 @@
-CONSUMER_KEY = "Your keys"
-CONSUMER_SECRET = "Your keys"
-ACCESS_KEY = "Your keys"
-ACCESS_SECRET = "Your keys"
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
+ACCESS_KEY = ''
+ACCESS_SECRET = ''

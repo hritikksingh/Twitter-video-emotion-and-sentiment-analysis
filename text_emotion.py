@@ -6,7 +6,7 @@ import transformers
 from tqdm.notebook import tqdm
 from tokenizers import Tokenizer, models, pre_tokenizers, decoders, processors
 from tensorflow.keras.preprocessing import sequence, text
-from tensorflow.keras.models import model_from_json,model_from_yaml
+from tensorflow.keras.models import model_from_json
 from tqdm import tqdm
 import pickle
 import speech_recognition as sr
@@ -89,10 +89,10 @@ def speech_to_text():
 
 
 def get_text_sentiment():
-    yaml_file = open('./data/text/model.yaml', 'r')
-    loaded_model_yaml = yaml_file.read()
-    yaml_file.close()
-    model = model_from_yaml(loaded_model_yaml)
+    json_file = open('./data/text/model.json', 'r')
+    loaded_model_json = json_file.read()
+    json_file.close()
+    model = model_from_json(loaded_model_json)
     # load weights into new model
     model.load_weights("./data/text/model.h5")
     

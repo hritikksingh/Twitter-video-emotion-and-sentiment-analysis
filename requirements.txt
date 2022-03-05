@@ -35,5 +35,5 @@ tqdm==4.61.1
 transformers==4.8.1
 tweepy==3.10.0
 tweet-preprocessor==0.6.0
-urllib3==1.26.6
+urllib3
 websocket-client==1.1.0
