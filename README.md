@@ -1,10 +1,52 @@
 # Wait!!
-## What is this project Project?
-The main aim of this project is to perform sentiment and emotion analysis of all the videos uploaded to twitter tagging the twitter bot which we have created. We can't fetch the videos without mentioning the bot as twitter doesn't allow this, so we need our own Twitter developer API.
+## An overview of the Project?
+The main aim of this project is to perform sentiment and emotion analysis of all the videos uploaded to twitter by tagging the twitter bot which we have created in this project. We can't fetch the videos without mentioning the bot as twitter doesn't allow this, so we need our own **Twitter developer API**.
 ## What is sentiment analaysis then?
-Sentiment analysis is the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information.
+- Sentiment analysis is the use of **natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study effective states and subjective information**. Sentiment Analysis aims to detect `positive, neutral, or negative` feelings from text.
+- Typically sentiment analysis seems to work best on subjective text, where people express opinions, feelings, and their mood. But, this project is not only going to make sentiment analysis on text, it will work on identifying emotions in speech and videos which makes it a unique idea to implement and contribute. In simpler words, The idea is to analyze and understand the reactions of people toward a specific entity and take insightful actions based on their sentiment.
+
 ## Now what is emotion analysis?
-Emotion analysis is the process of identifying human emotion.
+Emotion analysis is the process of identifying and understanding human emotions. Emotion Analysis aims to detect and recognize types of feelings through the expression of texts, such as anger, disgust, fear, happiness, sadness, and surprise.
+
+## Files used in this project
+
+| File      | Description |
+| :-----------: | :-----------: |
+| **Data** | This contains the Dataset used to train our model. This directory contains further 3 folders namely speech, text, video. 
+|          | - speech folder contains a python pickle file named `Emotion_Voice_Detection_Model.pkl` which is a voice detection model which acts on a speech.
+|          | - text folder contain files with words, misspelled words and contractions for data cleaning, stemming, lemmatization.
+|          | - video folder contains files with video paths and some emotion tags for pre-processing. |
+| **keys.py**   | This file contains keys for authorization purposes for having a convenient connection access between twitter API and our bot. |
+| **remove.py** | This file contains a remove method to remove the specified file path downloaded while checking emotion analysis for an audio or video tweet as it directly interacts with the Operating System. |
+| **requirements.txt** | This is a text file containing all libraries , packages with their respective versions. |
+| **speech_emotion.py** | This is a python file which contains a method to extract features and another to predict the emotions during a speech.  |
+| **text_emotion.py** | This is a python file which contains methods to extract text from speech and handling or text cleaning of the misspelled, contractions, punctuations and emojis, eventually giving the text sentiment. |
+| **video_emotion.py** | This is a python file which contain methods to run a video, write emotion on excel sheet and calculate the percentage of every emotion in the video. |
+| **threads.py** | This is a python file which is responsible to store the emotions from speech, text and videos using threads. This file also contain methods to convert and reduce quality of file either it is an audio or a video. |
+| **tweet_check.py** | This is a python file which is responsible for making an authorized connection between the twitter API and the bot. This file reads and writes the tweets made on twitter. |
+
+## Requirements and versions
+
+- **`cmake - 3.20.5`**                 |               **`requests - 2.22.0`** 
+- **`dlib - 19.22.0`**                 |               **`requests-oauthlib - 1.3.0`**         
+- **`emoji - 1.2.0`**                  |               **`requests-unixsocket - 0.2.0`**
+- **`fastai - 1.0.61`**                |               **`responses - 0.13.3`**
+- **`fastcore - 1.3.20`**              |               **`scikit-learn`**
+- **`fastprogress - 1.0.0`**           |               **`scipy`**
+- **`Flask - 1.1.2`**                  |               **`simplejson - 3.16.0`**
+- **`imutils - 0.5.4`**                |               **`SpeechRecognition - 3.8.1`**
+- **`Keras - 2.4.3`**                  |               **`tensorflow`**
+- **`Keras-Preprocessing - 1.1.2`**    |               **`tensorflow-estimator`**
+- **`librosa - 0.8.1`**                |               **`tensorflow-gpu`**
+- **`matplotlib - 3.4.2`**             |               **`tokenizers - 0.10.3`**
+- **`matplotlib-inline - 0.1.2`**      |               **`torch`**
+- **`moviepy`**                        |               **`tweepy`**                        
+- **`numpy`**                          |               **`tqdm - 4.61.1`**
+- **`opencv-python`**                  |               **`transformers - 4.8.1`**
+- **`openpyxl - 3.0.7`**               |               **`tweepy - 3.10.0`**
+- **`pandas - 1.2.5`**                 |               **`tweet-preprocessor - 0.6.0`**
+- **`pyforest - 1.1.0`**               |               **`urllib3 - 1.26.6`**
+- **`websocket-client - 1.1.0`**
 
 ## Okay you know everything now, Let's start 
 ### Let's setup in your local machine first:
