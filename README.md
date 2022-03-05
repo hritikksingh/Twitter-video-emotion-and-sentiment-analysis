@@ -23,7 +23,7 @@ Emotion analysis is the process of identifying and understanding human emotions.
 | **text_emotion.py** | This is a python file which contains methods to extract text from speech and handling or text cleaning of the misspelled, contractions, punctuations and emojis, eventually giving the text sentiment. |
 | **video_emotion.py** | This is a python file which contain methods to run a video, write emotion on excel sheet and calculate the percentage of every emotion in the video. |
 | **threads.py** | This is a python file which is responsible to store the emotions from speech, text and videos using threads. This file also contain methods to convert and reduce quality of file either it is an audio or a video. |
-| **tweet_check.py** | This is a python file which is responsible for making an authorized connection between the twitter API and the bot. This file reads and writes the tweets made on twitter. |
+| **tweet_check.py** | This is a python file which is responsible for making an authorized connection between the twitter API and our bot. This file reads and writes the tweets made on twitter. |
 
 ## Requirements and versions
 
