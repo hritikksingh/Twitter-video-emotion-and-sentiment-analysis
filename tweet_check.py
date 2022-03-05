@@ -67,7 +67,7 @@ def createTweet(output):
         temp+="  "
         count+=1
         if count==3:
-            break;
+            break
     output['video']=temp
 
     count=0
@@ -78,7 +78,7 @@ def createTweet(output):
         temp+=" "
         count+=1
         if count==3:
-            break;
+            break
     output['text']=temp
 
     tweet=f"""
