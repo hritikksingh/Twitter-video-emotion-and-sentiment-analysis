@@ -12,7 +12,7 @@ Emotion analysis is the process of identifying and understanding human emotions.
 
 | File      | Description |
 | :-----------: | :-----------: |
-| **Data** | This contains the Dataset used to train our model. This directory contains further 3 folders namely speech, text, video. 
+| **Data** | This directory contains further 3 folders namely speech, text, video. 
 |          | - speech folder contains a python pickle file named `Emotion_Voice_Detection_Model.pkl` which is a voice detection model which acts on a speech.
 |          | - text folder contain files with words, misspelled words and contractions for data cleaning, stemming, lemmatization.
 |          | - video folder contains files with video paths and some emotion tags for pre-processing. |
@@ -45,7 +45,7 @@ Emotion analysis is the process of identifying and understanding human emotions.
 - **`opencv-python`**                  |               **`transformers - 4.8.1`**
 - **`openpyxl - 3.0.7`**               |               **`tweepy - 3.10.0`**
 - **`pandas - 1.2.5`**                 |               **`tweet-preprocessor - 0.6.0`**
-- **`pyforest - 1.1.0`**               |               **`urllib3 - 1.26.6`**
+- **`pyforest - 1.1.0`**               |               **`urllib3`**
 - **`websocket-client - 1.1.0`**
 
 ## Okay you know everything now, Let's start 
