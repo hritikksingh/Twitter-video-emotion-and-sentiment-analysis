@@ -46,7 +46,7 @@ Emotion analysis is the process of identifying and understanding human emotions.
 - **`openpyxl - 3.0.7`**               |               **`tweepy - 3.10.0`**
 - **`pandas - 1.2.5`**                 |               **`tweet-preprocessor - 0.6.0`**
 - **`pyforest - 1.1.0`**               |               **`urllib3`**
-- **`websocket-client - 1.1.0`**
+- **`pydub`**                          |               **`websocket-client - 1.1.0`**
 
 ## Okay you know everything now, Let's start 
 ### Let's setup in your local machine first:
