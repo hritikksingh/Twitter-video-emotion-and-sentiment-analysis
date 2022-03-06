@@ -52,7 +52,7 @@ def get_perc():
             count[cell_val]=1
         else:
             count[cell_val]+=1
-    total=sh.max_row-1;
+    total=sh.max_row-1
     for key,value in count.items():
         count[key]=(value/total)*100
     return count

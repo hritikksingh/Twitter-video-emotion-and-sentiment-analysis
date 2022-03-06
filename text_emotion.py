@@ -85,7 +85,7 @@ def speech_to_text():
         audio = r.record(source)
         text = r.recognize_google(audio)   
     
-    return text;
+    return text
 
 
 def get_text_sentiment():

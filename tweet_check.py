@@ -94,8 +94,3 @@ if __name__=="__main__":
     api,auth = setAuth()
     followStream()
     
-
-
-
-    
-    
