@@ -1,4 +1,4 @@
-# ## Sentiment Analysis on sample dataset
+x# ## Sentiment Analysis on sample dataset
 import pandas as pd
 import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing.text import Tokenizer
@@ -58,6 +58,14 @@ print(model.summary())
 
 history = model.fit(padded_sequence,sentiment_label[0],validation_split=0.2, epochs=5, batch_size=32)
 
+model.save("model.h5")
+import json
+
+config = model.to_json()
+config = json.loads(config)
+with open('model.json', 'w') as f:
+    json.dump(config, f)
+
 plt.plot(history.history['accuracy'], label='acc')
 plt.plot(history.history['val_accuracy'], label='val_acc')
 plt.legend()
@@ -84,6 +92,8 @@ predict_sentiment(test_sentence1)
 
 test_sentence2 = "This is the worst flight experience of my life!"
 predict_sentiment(test_sentence2)
+
+
 
 
 
